@@ -124,12 +124,9 @@ istream &operator>>(istream &istr, TSet &s) // ввод
 {
     int elem;
 
-    istr >> elem;
-
-    while (elem != -1)
+    while (istr >> elem && elem != -1)
     {
         s.InsElem(elem);
-        istr >> elem;
     }
 
     return istr;
